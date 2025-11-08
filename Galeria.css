@@ -1,0 +1,109 @@
+/* 1. Reset Básico y Tipografía */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6e6e6; 
+    background-image: url(cover2-2400x1600.webp); 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center center; 
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+/* 2. Estilos de Encabezado */
+.presentacion {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(44, 62, 80, 0.8); /* Usa un color semi-transparente */
+    /* Así la imagen de fondo del body se verá LIGERAMENTE detrás,
+       pero el encabezado mantendrá su tono y el texto será legible. */
+    color: white; 
+    margin-bottom: 40px;
+}
+
+/* NUEVOS ESTILOS PARA LA IMAGEN DEL TÍTULO */
+.imagen-titulo {
+    max-width: 150px; /* Ajusta este valor según el tamaño deseado de tu imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espacio entre la imagen y el título h1 */
+    /* Puedes añadir más estilos como border-radius, box-shadow, etc. */
+    border-radius: 50%; /* Ejemplo: Si quieres que sea circular */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Un toque de sombra */
+}
+.presentacion h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* 3. Estilos de la Galería (Grid Layout) */
+.galeria {
+    display: grid;
+    /* Crea 2 columnas iguales y ajusta a 1 columna en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* 4. Estilos de la Tarjeta del Proyecto */
+.proyecto-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para el efecto hover */
+}
+
+/* Estilo al pasar el ratón (efecto "hermoso") */
+.proyecto-card:hover {
+    transform: translateY(-5px); /* Se levanta un poco */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-card a {
+    text-decoration: none; /* Quita el subrayado del link */
+    color: inherit; /* Hereda el color del texto */
+    display: block; /* Hace que el link ocupe toda la tarjeta */
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    display: block;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.info p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* 5. Estilos de Pie de Página */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
+    color: #7f8c8d;
+    font-size: 0.8em;
+}
